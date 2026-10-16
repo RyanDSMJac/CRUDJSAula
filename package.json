@@ -1,0 +1,30 @@
+{
+  "name": "crudjs",
+  "version": "1.0.0",
+  "description": "Este documento descreve os padrões obrigatórios para o ciclo de vida de desenvolvimento de software (SDLC) deste repositório.",
+  "main": "crud.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanDSMJac/CRUDJSAula.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RyanDSMJac/CRUDJSAula/issues"
+  },
+  "homepage": "https://github.com/RyanDSMJac/CRUDJSAula#readme",
+  "devDependencies": {
+    "eslint": "^10.13.0",
+    "jest": "^30.5.2",
+    "prettier": "^3.9.10",
+    "supertest": "^7.3.1"
+  },
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
