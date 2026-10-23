@@ -1,11 +1,13 @@
-# Guia de Desenvolvimento, Qualidade e Operações
+# Guia de Desenvolvimento, Qualidade e Operações (Projeto de Ryan Pedro e Pedro Enrique Jesus)
 
 Este documento descreve os padrões obrigatórios para o ciclo de vida de desenvolvimento de software (SDLC) deste repositório.
 
 ---
 
 ## 1. Controle de Versionamento (Git Flow)
+
 Utilizamos uma variação simplificada do Git Flow:
+
 - **`main`**: Branch de produção. Código estável e testado.
 - **`develop`**: Branch de integração para a próxima release.
 - **Features/Bugfixes**: Criadas a partir de `develop` com o padrão de nomenclatura:
@@ -15,7 +17,9 @@ Utilizamos uma variação simplificada do Git Flow:
 ---
 
 ## 2. Processo de Pull Request (PR)
+
 Para enviar código para o repositório oficial:
+
 1. Abra um Pull Request direcionado à branch `develop`.
 2. O título deve seguir o padrão Conventional Commits (ex: `feat: adiciona calculo de idade no CRUD`).
 3. **Critérios de aceite para merge:**
@@ -26,19 +30,22 @@ Para enviar código para o repositório oficial:
 ---
 
 ## 3. Análise Estática e Formatação
+
 Garantimos a padronização e qualidade do código através de ferramentas automatizadas:
+
 - **Formatação (Prettier):**
   ```bash
   npm run format
 
 
+  ```
+
 * **Linting (ESLint):** Verifica erros de sintaxe e más práticas.
+
 ```bash
 npm run lint
 
 ```
-
-
 
 ---
 
@@ -46,30 +53,33 @@ npm run lint
 
 O projeto conta com duas camadas de testes:
 
-* **Testes Unitários:** Validam funções isoladas (ex: regras de negócio do CRUD e cálculo de idade).
+- **Testes Unitários:** Validam funções isoladas (ex: regras de negócio do CRUD e cálculo de idade).
+
 ```bash
 npm run test:unit
 
 ```
 
+- **Testes de Integração:** Validam a comunicação entre módulos ou rotas da API (usando Supertest, por exemplo).
 
-* **Testes de Integração:** Validam a comunicação entre módulos ou rotas da API (usando Supertest, por exemplo).
 ```bash
 npm run test:integration
 
 ```
+
 ---
 
 ### Comandos úteis:
 
-* **Construir a imagem:**
+- **Construir a imagem:**
+
 ```bash
 docker build -t minha-aplicacao-crud:latest .
 
 ```
 
+- **Executar o container:**
 
-* **Executar o container:**
 ```bash
 docker run -p 3000:3000 minha-aplicacao-crud:latest
 
