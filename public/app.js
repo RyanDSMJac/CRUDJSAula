@@ -61,7 +61,7 @@ function criarLinha(pessoa) {
   const acoes = document.createElement('td');
   acoes.appendChild(criarBotao('Editar', '', () => iniciarEdicao(pessoa)));
   acoes.appendChild(
-    criarBotao('Excluir', 'perigo', () => excluirPessoa(pessoa)),
+    criarBotao('Excluir', 'perigo', () => excluirPessoa(pessoa))
   );
   tr.appendChild(acoes);
 

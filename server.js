@@ -16,7 +16,9 @@ app.post('/api/pessoas', (req, res) => {
   try {
     const { cpf } = req.body;
     if (cpf && gerenciador.lerPorCpf(cpf)) {
-      return res.status(409).json({ erro: 'Já existe uma pessoa com esse CPF.' });
+      return res
+        .status(409)
+        .json({ erro: 'Já existe uma pessoa com esse CPF.' });
     }
     const pessoa = gerenciador.criar(req.body);
     return res.status(201).json(pessoa);

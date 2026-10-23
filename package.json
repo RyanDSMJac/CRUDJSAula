@@ -5,13 +5,18 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test:unit": "jest pessoa.test.js"
+    "test:unit": "jest pessoa.test.js",
+    "test:integration": "jest server.test.js",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "express": "^4.21.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "eslint": "^10.13.0",
+    "globals": "^17.13.0",
     "jest": "^30.5.2",
     "prettier": "^3.9.10",
     "supertest": "^7.3.1"
