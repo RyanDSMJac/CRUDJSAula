@@ -11,7 +11,7 @@ describe('Gerenciador de Pessoas (CRUD + TDD)', () => {
     const dados = {
       cpf: '12345678909',
       nome: 'Ana Silva',
-      dataNascimento: '1995-05-15'
+      dataNascimento: '1995-05-15',
     };
 
     const novaPessoa = gerenciador.criar(dados);
@@ -26,7 +26,7 @@ describe('Gerenciador de Pessoas (CRUD + TDD)', () => {
     gerenciador.criar({
       cpf: '98765432100',
       nome: 'Carlos Souza',
-      dataNascimento: '1990-10-20'
+      dataNascimento: '1990-10-20',
     });
 
     const pessoa = gerenciador.lerPorCpf('98765432100');
@@ -38,10 +38,12 @@ describe('Gerenciador de Pessoas (CRUD + TDD)', () => {
     gerenciador.criar({
       cpf: '11122233344',
       nome: 'Mariana',
-      dataNascimento: '2000-01-01'
+      dataNascimento: '2000-01-01',
     });
 
-    const atualizado = gerenciador.atualizar('11122233344', { nome: 'Mariana Costa' });
+    const atualizado = gerenciador.atualizar('11122233344', {
+      nome: 'Mariana Costa',
+    });
     expect(atualizado.nome).toBe('Mariana Costa');
   });
 
@@ -49,7 +51,7 @@ describe('Gerenciador de Pessoas (CRUD + TDD)', () => {
     gerenciador.criar({
       cpf: '55566677788',
       nome: 'João',
-      dataNascimento: '1985-12-10'
+      dataNascimento: '1985-12-10',
     });
 
     const removido = gerenciador.deletar('55566677788');

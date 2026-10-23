@@ -8,7 +8,7 @@ class GerenciadorPessoas {
     const nascimento = new Date(dataNascimento);
     let idade = hoje.getFullYear() - nascimento.getFullYear();
     const m = hoje.getMonth() - nascimento.getMonth();
-    
+
     if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
       idade--;
     }
@@ -25,7 +25,7 @@ class GerenciadorPessoas {
       cpf,
       nome,
       dataNascimento,
-      idade: this._calcularIdade(dataNascimento)
+      idade: this._calcularIdade(dataNascimento),
     };
 
     this.pessoas.push(novaPessoa);
@@ -33,7 +33,7 @@ class GerenciadorPessoas {
   }
 
   lerPorCpf(cpf) {
-    return this.pessoas.find(p => p.cpf === cpf);
+    return this.pessoas.find((p) => p.cpf === cpf);
   }
 
   atualizar(cpf, novosDados) {
@@ -49,9 +49,9 @@ class GerenciadorPessoas {
   }
 
   deletar(cpf) {
-    const index = this.pessoas.findIndex(p => p.cpf === cpf);
+    const index = this.pessoas.findIndex((p) => p.cpf === cpf);
     if (index === -1) return false;
-    
+
     this.pessoas.splice(index, 1);
     return true;
   }
